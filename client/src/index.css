@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    * {
+        scrollbar-color: #E7B986 #312424;
+        scrollbar-width: thin;
+    }
+
+
+    body {
+        @apply bg-primary/65
+    }
+
+
+}
