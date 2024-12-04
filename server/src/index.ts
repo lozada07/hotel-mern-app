@@ -5,7 +5,6 @@ import cookieParse from "cookie-parser";
 import helmet from "helmet";
 import { accommodationRoutes, authRoutes } from "./routes";
 import connectDB from "./config/db";
-
 const app = express();
 
 //!TODO: connect DB
