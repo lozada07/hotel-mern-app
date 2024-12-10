@@ -15,11 +15,11 @@ const GuestInfoSchema = z.object({
     checkIn: z.date({
         required_error: "Check-in date is required",
         invalid_type_error: "Invalid date format",
-    }),
+    }).nullable(),
     checkOut: z.date({
         required_error: "Check-out date is required",
         invalid_type_error: "Invalid date format",
-    }),
+    }).nullable(),
     adultCount: z.string()
         .transform((val) => Number(val))
         .refine((val) => !isNaN(val) && val > 0, {
@@ -32,10 +32,9 @@ const GuestInfoSchema = z.object({
         }),
 });
 
-type GuestInfoFormData = z.infer<typeof GuestInfoSchema>;
+
 
 const GuestInfo = ({ accommodation }: PropsAccommodation) => {
-    const search = useSearchBar();
     const navigate = useNavigate();
     const searchBar = useSearchBar()
 
@@ -99,14 +98,15 @@ const GuestInfo = ({ accommodation }: PropsAccommodation) => {
                                 startDate={checkIn}
                                 endDate={checkOut}
                                 onChange={(update) => {
-                                    methods.setValue('checkIn', update[0]);
-                                    methods.setValue('checkOut', update[1]);
+                                    methods.setValue('checkIn', update[0] ?? new Date());
+                                    methods.setValue('checkOut', update[1] ?? new Date());
                                 }}
                                 minDate={minDate}
                                 maxDate={maxDate}
                                 isClearable={true}
                                 className="bg-transparent w-full h-6 font-semibold p-2 focus:outline-none"
                             />
+
                         </label>
                     </div>
                     <div className="my-6 space-y-4">

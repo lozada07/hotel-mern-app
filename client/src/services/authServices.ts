@@ -1,10 +1,5 @@
 import { axiosConfig } from "../libs/axios/axiosConfig";
-import {
-  LoginType,
-  PropsResetPassword,
-  PropsResetPasswordData,
-  UserType,
-} from "../types";
+import { LoginType, PropsResetPasswordData, UserType } from "../types";
 
 export const createAccount = async (data: UserType) => {
   const res = await axiosConfig.post("/auth/createAccount", data);

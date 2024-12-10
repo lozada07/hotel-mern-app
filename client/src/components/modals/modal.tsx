@@ -1,7 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 import { ReactNode } from "react";
-import { fadeIn } from "../../utils/framerAnimation";
 
 type Props = {
     isOpen: boolean;
@@ -12,7 +11,7 @@ type Props = {
     footer?: ReactNode
 }
 
-const Modal = ({ isOpen, onClose, title, body, footer, onSubmit }: Props) => {
+const Modal = ({ isOpen, onClose, title, body, footer }: Props) => {
     const stopPropagation = (e: React.MouseEvent) => e.stopPropagation();
 
 

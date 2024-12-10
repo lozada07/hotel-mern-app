@@ -1,5 +1,4 @@
 import { useFormContext } from 'react-hook-form'
-import { GoAlertFill } from "react-icons/go";
 import ErrorZod from './ErrorZod';
 
 type Props = {

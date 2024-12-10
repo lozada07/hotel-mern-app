@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Loader = () => {
     return (
         <div className='bg-secondary h-screen flex justify-center   items-center'>

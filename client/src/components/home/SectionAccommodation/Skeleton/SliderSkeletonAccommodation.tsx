@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SliderSkeletonAccommodation = ({ row, isFilter }: { row: boolean, isFilter: boolean }) => {
     return (
         <div

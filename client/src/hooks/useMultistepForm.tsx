@@ -1,5 +1,5 @@
 import { ReactElement, useState } from "react";
-import { ZodAny, ZodObject, ZodType } from "zod";
+import { ZodType } from "zod";
 
 export function useMultistepForm(steps: ReactElement[], zodSchema: ZodType<any>[]) {
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);

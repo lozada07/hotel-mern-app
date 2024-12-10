@@ -1,9 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createAccount, forgotPassword, loginAccount, signOutAccount, resetPassword } from "../../../services/authServices";
-import { LoginType, PropsResetPassword, UserType } from "../../../types";
+import { LoginType, UserType } from "../../../types";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
-import { createAccommodation } from "../../../services/AccommodationService";
 
 export const useCreateAccount = () => {
     const navigate = useNavigate()

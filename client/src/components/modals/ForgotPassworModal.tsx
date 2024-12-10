@@ -6,7 +6,6 @@ import Loading from '../ui/Loading'
 import { useForgotPassword } from '../../libs/react-query/queryMutation/AuthMutation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import z from 'zod'
-import ErrorZod from '../ui/ErrorZod'
 
 
 type PropsForgetPassword = {

@@ -22,6 +22,7 @@ const AccommodationForm = ({ form }: { form: PropsMultiStepForm }) => {
         price: 0,
         starRating: 0,
         type: "",
+        createdAt: ""
 
     })
     const { mutateAsync: createAccommodation, isPending: loading, } = useCreateAccommodation()

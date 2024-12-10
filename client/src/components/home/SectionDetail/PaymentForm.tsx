@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { createRoomBooking } from '../../../services/AccommodationService';
 import { useForm } from 'react-hook-form';
 import { PaymentFormProps } from '../../../types';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -16,9 +16,9 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ paymentIntent, reservation })
     const elements = useElements();
     const navigate = useNavigate();
 
-    const { handleSubmit, register } = useForm({
+    const { handleSubmit } = useForm({
     });
-    const { mutate: bookAccomodation, isPending: isLoading, error } = useMutation(
+    const { mutate: bookAccomodation, isPending: isLoading, } = useMutation(
         {
             mutationFn: createRoomBooking,
             onSuccess: () => {

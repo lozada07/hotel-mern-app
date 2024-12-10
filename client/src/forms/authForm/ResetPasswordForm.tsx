@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { FormProvider, useForm } from "react-hook-form"
-import z from "zod"
 import Input from "../../components/ui/Input"
 import Loading from "../../components/ui/Loading"
 import { ResetPasswordSchema } from "../../libs/zodSchema/AuthSchema"
@@ -21,7 +20,7 @@ const ResetPasswordForm = () => {
         resolver: zodResolver(ResetPasswordSchema)
     })
 
-    const { mutateAsync: resetPassword, isPending: loading, error } = useResetPassword()
+    const { mutateAsync: resetPassword, isPending: loading, } = useResetPassword()
 
     const onSubmit = methods.handleSubmit((value: PropsResetPassword) => {
         const data = {

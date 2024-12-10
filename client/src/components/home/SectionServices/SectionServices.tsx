@@ -8,7 +8,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const SectionServices = () => {
     const [isPaused, setIsPaused] = useState(true);
-    const videoRef = useRef(null);
+    const videoRef = useRef<HTMLVideoElement | null>(null)
 
     const services = ["Consultation 24 hours a day", "Certification Team", "More Office Branch", "Best Work Result"]
 

@@ -7,7 +7,7 @@ import { Menu, Transition } from '@headlessui/react';
 const Navbar = () => {
 
 
-    const { isAuthenticated, user, isLoading } = useAuth()
+    const { isAuthenticated, user } = useAuth()
 
 
     const { mutateAsync: signOutAccount } = useSignOut()
@@ -71,17 +71,17 @@ const Navbar = () => {
 
                             <Menu.Items className="absolute  -right-4   w-48 origin-top-right rounded-br-md rounded-bl-md  bg-secondary py-2 px-1   focus:outline-none">
                                 <Menu.Item>
-                                    {({ active }) => (
+                                    {({ }) => (
                                         <p
                                             className={'block border-b-2 mb-3 overflow-hidden overflow-ellipsis border-primary/60 font-bold px-4 py-3 text-sm text-primary/90  font-inter'}
                                         >
-                                            {user?.data.email}
+                                            {user?.email}
 
                                         </p>
                                     )}
                                 </Menu.Item>
                                 <Menu.Item>
-                                    {({ active }) => (
+                                    {({ }) => (
                                         <Link
                                             to="/create-accommodation"
                                             className={'block px-4 py-2 text-sm text-primary/90  font-inter'}
@@ -92,7 +92,7 @@ const Navbar = () => {
                                     )}
                                 </Menu.Item>
                                 <Menu.Item>
-                                    {({ active }) => (
+                                    {({ }) => (
                                         <Link
                                             to="/user-reservations"
                                             className={'block px-4 py-2 text-sm text-primary/90  font-inter'}
@@ -102,7 +102,7 @@ const Navbar = () => {
                                     )}
                                 </Menu.Item>
                                 <Menu.Item>
-                                    {({ active }) => (
+                                    {({ }) => (
                                         <Link
                                             to="/user-accommodations"
                                             className={'block px-4 py-2 text-sm text-primary/90  font-inter'}
@@ -112,7 +112,7 @@ const Navbar = () => {
                                     )}
                                 </Menu.Item>
                                 <Menu.Item>
-                                    {({ active }) => (
+                                    {({ }) => (
                                         <button
                                             onClick={handleSignOut}
                                             className={'block px-4 py-2 text-sm text-primary/90  font-inter'}

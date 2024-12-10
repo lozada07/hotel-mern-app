@@ -1,5 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
+import { motion } from "framer-motion";
 import { GoAlertFill } from "react-icons/go";
 
 type Props = {

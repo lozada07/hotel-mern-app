@@ -1,9 +1,8 @@
 import { FaCalendarDays } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-type Props = {}
 
-const SectionDetail = (props: Props) => {
+const SectionDetail = () => {
     return (
         <section className="container  w-full gap-x-5 mb-32  gap-y-5 grid grid-cols-1 grid-rows-2 sm:gap-y-0  sm:grid-cols-2 sm:grid-rows-1 lg:gap-x-0">
             <article className="relative bg-transparent sm:bg-secondary sm:rounded-2xl md:bg-transparent">

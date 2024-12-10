@@ -1,7 +1,6 @@
 import { useGetAllAccommodations } from "../../../libs/react-query/query/AccommodationQuery";
 import CardAccommodation from "./CardAccommodation";
 import { AccommodationFormData } from "../../../types";
-import { useState } from "react";
 
 
 const SectionAccommodation = () => {

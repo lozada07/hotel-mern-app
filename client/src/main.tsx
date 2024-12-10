@@ -4,7 +4,6 @@ import './index.css'
 import { QueryProvider } from './libs/react-query/QueryProvider.tsx'
 import SonnerProvider from './libs/sonner/SonnerProvider.tsx'
 import { AuthProvider } from './contexts/AuthContext.tsx'
-import { AnimatePresence } from 'framer-motion'
 import App from './App.tsx'
 import { SearchBarProvider } from './contexts/SearchBarContext.tsx'
 
