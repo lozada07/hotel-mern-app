@@ -1,5 +1,6 @@
 import { axiosConfig } from "../libs/axios/axiosConfig";
 import { BookingType } from "../types";
+console.log(axiosConfig);
 
 export const createAccommodation = async (data: FormData) => {
   const res = await axiosConfig.post("/accommodation", data, {
