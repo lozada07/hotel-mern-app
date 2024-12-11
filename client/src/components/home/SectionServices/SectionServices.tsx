@@ -42,7 +42,7 @@ const SectionServices = () => {
                             <div className=" border-2 border-primary rounded-sm">
 
                                 <video preload="auto" ref={videoRef} autoPlay={!isPaused} loop muted className="w-full md:w-[420px]  md:aspect-video  rounded-sm relative ">
-                                    <source src="/public/interior.mp4" type="video/mp4" />
+                                    <source src="/interior.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>
