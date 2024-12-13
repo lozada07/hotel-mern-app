@@ -1,11 +1,11 @@
 import GridItem from "./GridItem";
 
 const GridItems = [
-    { name: "Hotel", imgPath: "/public/assets/images/hotel.webp", styles: "row-span-2 hidden lg:flex" },
-    { name: "Home", imgPath: "/public/assets/images/auth-background.webp" },
-    { name: "Cabin", imgPath: "/public/assets/images/cabin.webp" },
-    { name: "Trailer", imgPath: "/public/assets/images/trailer.webp" },
-    { name: "Apartment", imgPath: "/public/assets/images/apartment.webp" },
+    { name: "Hotel", imgPath: "assets/images/hotel.webp", styles: "row-span-2 hidden lg:flex" },
+    { name: "Home", imgPath: "assets/images/auth-background.webp" },
+    { name: "Cabin", imgPath: "assets/images/cabin.webp" },
+    { name: "Trailer", imgPath: "assets/images/trailer.webp" },
+    { name: "Apartment", imgPath: "assets/images/apartment.webp" },
 ];
 
 export const SectionGrid = () => {
