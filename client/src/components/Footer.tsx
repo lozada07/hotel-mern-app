@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="flex justify-center md:block  ">
                     <div className=" flex items-center gap-1.5 sm:gap-1 ">
 
-                        <img src="/public/assets/icons/logo.svg"
+                        <img src="assets/icons/logo.svg"
 
                             className=' w-28 h-28 sm:w-24 sm:h-24 -mt-3'
                             alt="logo" />
