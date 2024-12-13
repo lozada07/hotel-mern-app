@@ -6,8 +6,8 @@ const SectionDetail = () => {
     return (
         <section className="container  w-full gap-x-5 mb-32  gap-y-5 grid grid-cols-1 grid-rows-2 sm:gap-y-0  sm:grid-cols-2 sm:grid-rows-1 lg:gap-x-0">
             <article className="relative bg-transparent sm:bg-secondary sm:rounded-2xl md:bg-transparent">
-                <img src="/public/assets/images/interiorshome1.jpg" alt="" className=" h-[355px] drop-shadow-md border-2 border-secondary sm:border-none rounded-t-xl sm:h-full lg:h-[370px]  w-full lg:w-auto absolute sm:rounded-t-2xl md:rounded-2xl object-cover" />
-                <img src="/public/assets/images/interiorshome2.jpg" alt="" className="h-[370px] hidden lg:block absolute rounded-2xl z-10 bottom-3 md:right-[40px] lg:right-[120px] border-4 border-primary" />
+                <img src="assets/images/interiorshome1.jpg" alt="" className=" h-[355px] drop-shadow-md border-2 border-secondary sm:border-none rounded-t-xl sm:h-full lg:h-[370px]  w-full lg:w-auto absolute sm:rounded-t-2xl md:rounded-2xl object-cover" />
+                <img src="assets/images/interiorshome2.jpg" alt="" className="h-[370px] hidden lg:block absolute rounded-2xl z-10 bottom-3 md:right-[40px] lg:right-[120px] border-4 border-primary" />
                 <div className="-z-0 absolute hidden sm:flex rounded-b-2xl lg:rounded-2xl font-semibold text-opacity-80  text-2xl text-primary gap-x-3 justify-center lg:flex-col items-center bottom-0 lg:bottom-[40px] w-full lg:w-auto lg:left-[80px] shadow-md p-5 md:z-20 bg-secondary">
                     99%
                     <span className="text-opacity-0 text-lg md:text-[17px]">Customers like it</span>
