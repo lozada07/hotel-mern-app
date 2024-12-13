@@ -84,7 +84,7 @@ const AuthForm = () => {
 
                     </div>
                 </div>
-                <img src="/public/assets/images/img-auth.webp" className='hidden md:block w-[50%] object-cover object-center' alt="" />
+                <img src="assets/images/img-auth.webp" className='hidden md:block w-[50%] object-cover object-center' alt="" />
             </div>
         </>
 
