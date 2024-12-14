@@ -29,6 +29,6 @@ export const isAuthenticated = async (
 
     next();
   } catch (error) {
-    resError(res, 401, "No token, authorization denied");
+    resError(res, 401, "Invalid token, authorization denied");
   }
 };
