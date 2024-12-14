@@ -17,6 +17,7 @@ export const isAuthenticated = async (
   next: NextFunction
 ) => {
   const { auth_token } = req.cookies;
+  console.log("COOKIES", req.cookies)
   if (!auth_token) {
     return resError(res, 401, "No token, authorization denied");
   }
