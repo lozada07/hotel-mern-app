@@ -66,7 +66,7 @@ export const login = errorHandler(async (req: Request, res: Response) => {
     secure: process.env.NODE_ENV === "production",
     maxAge: 86400000,
     sameSite: "none",
-    domain : process.env.FRONTEND_URL
+    domain : "hotel-mern-app-production.up.railway.app"
   });
 
   return response({
