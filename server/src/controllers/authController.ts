@@ -31,8 +31,8 @@ export const createAccount = errorHandler(
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       maxAge: 86400000,
-      sameSite: "none",
-      domain : process.env.FRONTEND_URL
+      // sameSite: "none",
+      domain: process.env.COOKIE_DOMAIN,
     });
 
     return response({
@@ -65,10 +65,9 @@ export const login = errorHandler(async (req: Request, res: Response) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 86400000,
-    sameSite: "none",
-    domain : "hotel-mern-app-production.up.railway.app"
+    // sameSite: "none",
+    domain: process.env.COOKIE_DOMAIN,
   });
-
   return response({
     res: res,
     status: 200,
@@ -79,6 +78,7 @@ export const login = errorHandler(async (req: Request, res: Response) => {
 export const signOut = errorHandler(async (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
     expires: new Date(0),
+    domain: process.env.COOKIE_DOMAIN,
   });
 
   return response({
