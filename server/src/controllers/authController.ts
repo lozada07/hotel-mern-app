@@ -31,7 +31,7 @@ export const createAccount = errorHandler(
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       maxAge: 86400000,
-      // sameSite: "none",
+      sameSite: "none",
       domain: process.env.COOKIE_DOMAIN,
     });
 
@@ -65,7 +65,7 @@ export const login = errorHandler(async (req: Request, res: Response) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 86400000,
-    // sameSite: "none",
+    sameSite: "none",
     domain: process.env.COOKIE_DOMAIN,
   });
   return response({
