@@ -37,6 +37,16 @@ export type PropsMultiStepForm = {
   back: () => void;
 };
 
+export type BookingDetailType = {
+  _id: string;
+  userId: string;
+  adultCount: number;
+  childCount: number;
+  checkIn: string;
+  checkOut: string;
+  totalPrice: number;
+};
+
 export type AccommodationFormData = {
   _id?: string;
   user_id?: UserType;
@@ -55,6 +65,7 @@ export type AccommodationFormData = {
   facilities: string[];
   images?: FileList | File[];
   imagesUrl?: string[];
+  bookings?: BookingDetailType[];
 };
 export type PaymentIntentResponse = {
   paymentIntentId: string;

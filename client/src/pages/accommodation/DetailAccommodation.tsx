@@ -11,13 +11,22 @@ import { AccommodationFormData } from "../../types";
 import { useState } from "react";
 import { MdCancel } from "react-icons/md";
 import Loading from "../../components/ui/Loading";
+import { useAuth } from "../../contexts/AuthContext";
 
 const DetailAccommodation = () => {
     const { id } = useParams();
     const { data: resData, isLoading } = useGetAccommodation(id || "");
     const [reserve, setReserve] = useState(false);
-
+    const { user } = useAuth()
     const data: AccommodationFormData = resData;
+    const bookings = data?.bookings || []
+    const hasBooking = bookings.some(booking => booking.userId === user?._id);
+
+    if (hasBooking) {
+        console.log("El usuario tiene una reserva.");
+    } else {
+        console.log("El usuario no tiene reservas.");
+    }
 
 
     if (isLoading) {
@@ -33,7 +42,7 @@ const DetailAccommodation = () => {
     return (
         <div className="">
             <GalleryAccommodation imagesUrl={data.imagesUrl || []} />
-            <div className="grid md:grid-cols-[1fr_280px] lg:grid-cols-[1fr_400px] gap-3 lg:gap-5 mb-20 mt-10 lg:mt-16">
+            <div className={`grid  ${hasBooking ? "grid-cols-1" : "md:grid-cols-[1fr_280px] lg:grid-cols-[1fr_400px] gap-3 lg:gap-5"} mb-20 mt-10 lg:mt-16`}>
                 {/* Accommodation info */}
                 <div className="">
                     {/* Section Detail */}
@@ -129,13 +138,13 @@ const DetailAccommodation = () => {
                 </div>
 
                 {/* Reserve Form */}
-                <div className="hidden md:block">
+                <div className={`hidden md:${hasBooking ? "hidden" : "block"}`}>
                     <GuestInfo accommodation={data} />
                 </div>
             </div>
 
             {/* Mobile */}
-            <div className={`fixed w-full left-0 h-16 ${reserve ? "h-[350px]" : ""} rounded-t-lg transition-all duration-300 bottom-0 border-t-2 border-white/85 shadow-2xl bg-secondary md:hidden`}>
+            <div className={`${hasBooking ? "hidden" : "fixed"} w-full left-0 h-16 ${reserve ? "h-[350px]" : ""} rounded-t-lg transition-all duration-300 bottom-0 border-t-2 border-white /85 shadow-2xl bg-secondary md:hidden`}>
                 <div className={`${reserve ? "hidden" : "block"} flex p-3 justify-between items-center`}>
                     <span className="text-primary font-semibold text-xl">${data.price}</span>
                     <button onClick={() => setReserve(!reserve)} className="px-4 py-2 focus:outline-none font-semibold transition-opacity duration-200 hover:opacity-85 bg-primary rounded-md">
