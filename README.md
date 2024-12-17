@@ -1,4 +1,4 @@
-# MERN Blog App
+# ACCOMMODATION-APP
 
 ![Blog App)](https://res.cloudinary.com/ddd9ivydu/image/upload/v1703889443/uploads/qjnmleikdglnb1tp18ph.png)
 
@@ -47,11 +47,11 @@ npm run dev
  	FRONTEND_URL=
 	COOKIE_DOMAIN="localhost"
 
-    	#NODEMAILER
+    #NODEMAILER
  	GMAIL_USER=
 	GMAIL_PASSWORD=
 
-    	#CLOUDINARY
+    #CLOUDINARY
 	CLOUDINARY_CLOUD_NAME=
  	CLOUDINARY_API_KEY=
 	CLOUDINARY_API_SECRET=
