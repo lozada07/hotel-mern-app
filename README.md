@@ -8,30 +8,23 @@
 
 ### Demo
 
-**https://blogifydavid.vercel.app/**
+**https://stayswift-mern.netlify.app/**
 
 ### Cloning the repository
 
 ```shell
-https://github.com/lozada07/Blog.git
+https://github.com/lozada07/hotel-mern-app.git
 ```
 ## Server Configuration
 
 
-1. **Environment Files**: Navigate to the `client` folder and create one file `.env.local`. Add the following content:
+1. **Environment Files**: Navigate to the `client` folder and create one file `.env`. Add the following content:
 
     ```plaintext
-   MONGODB_URL=
-   
-	JWT_SECRET_KEY=
-	FRONTEND_URL=
-	PORT=
-
-	# Cloudinary Variables
-	CLOUD_NAME_CLOUDINARY=
-	API_KEY_CLOUDINARY=
-	API_SECRET_CLOUDINARY=
-	SECURE_CLOUDINARY=
+	VITE_BACKEND_URL=
+    
+	#STRIPE
+ 	VITE_STRIPE_API_KEY=
     ```
 ### Install Dependencies
 ```shell
@@ -43,15 +36,28 @@ npm run dev
 ```
 ## Client Configuration
 
-1. **Environment Files**: Navigate to the `client` folder and create one file `.env.local`. Add the following content:
+1. **Environment Files**: Navigate to the `server` folder and create one file `.env`. Add the following content:
 
     ```plaintext
-   VITE_BACKEND_URL=
+	#DATABASE
+	MONGODB_URL=
+	
+ 	PORT="8000"
+	JWT_SECRET_KEY=
+ 	FRONTEND_URL=
+	COOKIE_DOMAIN="localhost"
 
-   #Emailjs Variables
-	VITE_EMAILJS_SERVICE=
-	VITE_EMAILJS_TEMPLATE=
-	VITE_EMAILJS_API_KEY=
+    	#NODEMAILER
+ 	GMAIL_USER=
+	GMAIL_PASSWORD=
+
+    	#CLOUDINARY
+	CLOUDINARY_CLOUD_NAME=
+ 	CLOUDINARY_API_KEY=
+	CLOUDINARY_API_SECRET=
+
+ 	#STRIPE
+ 	STRIPE_API_KEY=
     ```
 ### Install Dependencies
 ```shell
