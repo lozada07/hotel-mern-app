@@ -77,9 +77,11 @@ export const login = errorHandler(async (req: Request, res: Response) => {
 
 export const signOut = errorHandler(async (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
+    httpOnly: true,
     expires: new Date(0),
     domain: process.env.COOKIE_DOMAIN,
     sameSite: "none",
+    secure: true,
   });
 
   return response({
