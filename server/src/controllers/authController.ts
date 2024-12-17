@@ -31,7 +31,7 @@ export const createAccount = errorHandler(
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       maxAge: 86400000,
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
       domain: process.env.COOKIE_DOMAIN,
     });
 
@@ -65,7 +65,7 @@ export const login = errorHandler(async (req: Request, res: Response) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 86400000,
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
     domain: process.env.COOKIE_DOMAIN,
   });
   return response({
@@ -79,7 +79,7 @@ export const signOut = errorHandler(async (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
     expires: new Date(0),
     domain: process.env.COOKIE_DOMAIN,
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
   });
 
   return response({
