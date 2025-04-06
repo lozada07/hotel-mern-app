@@ -3,8 +3,8 @@ import cors from "cors";
 import "dotenv/config";
 import cookieParse from "cookie-parser";
 import helmet from "helmet";
-import { accommodationRoutes, authRoutes } from "./routes";
-import connectDB from "./config/db";
+import { accommodationRoutes, authRoutes } from "./src/routes";
+import connectDB from "./src/config/db";
 const app = express();
 
 //!TODO: connect DB
