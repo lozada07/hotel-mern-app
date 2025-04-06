@@ -122,7 +122,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-y-4">
+              <div className="flex items-start gap-4">
                 <FaClock className="w-6 h-6 text-primary flex-shrink-0" />
                 <div>
                   <h3 className=" text-lg font-semibold">Business Hours</h3>
