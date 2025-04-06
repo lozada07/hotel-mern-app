@@ -32,7 +32,7 @@ export const createAccount = errorHandler(
       secure: process.env.NODE_ENV === "production",
       maxAge: 86400000,
       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-      domain: process.env.COOKIE_DOMAIN,
+      // domain: process.env.COOKIE_DOMAIN,
     });
 
     return response({
@@ -46,6 +46,7 @@ export const createAccount = errorHandler(
 export const login = errorHandler(async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
+  
   const user = await User.findOne({ email });
 
   if (!user) {
@@ -58,16 +59,18 @@ export const login = errorHandler(async (req: Request, res: Response) => {
     return resError(res, 401, "Invalid credentials");
   }
 
+  
   //Generate token
   const token = generateToken(user);
-
+  
   res.cookie("auth_token", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 86400000,
     sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-    domain: process.env.COOKIE_DOMAIN,
+      // domain: process.env.COOKIE_DOMAIN,
   });
+  
   return response({
     res: res,
     status: 200,
@@ -79,7 +82,6 @@ export const signOut = errorHandler(async (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
     httpOnly: true,
     expires: new Date(0),
-    domain: process.env.COOKIE_DOMAIN,
     sameSite: "none",
     secure: true,
   });
